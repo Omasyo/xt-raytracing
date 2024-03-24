@@ -1,4 +1,4 @@
-build: main.cpp
+build: .PHONY
 	g++ -g -o ./build main.cpp
 
 run: genImage
@@ -6,6 +6,8 @@ run: genImage
 
 genImage: build
 		./build > image.ppm
+
+.PHONY: 
 
 clean:
 	rm -f ./build
